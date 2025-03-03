@@ -1,0 +1,392 @@
+Comparison of All Models:
+               model  accuracy  precision    recall        f1       auc     k                                                                      best_params
+0                KNN  0.823954   0.764599  0.784644  0.774492  0.889833   3.0                                                          {'clf__n_neighbors': 9}
+1                SVM  0.784632   0.711211  0.742509  0.726523  0.826363   3.0                          {'clf__C': 10, 'clf__gamma': 0.1, 'clf__kernel': 'rbf'}
+2       DecisionTree  0.799784   0.735105  0.750936  0.742937  0.845824   3.0                             {'clf__max_depth': 10, 'clf__min_samples_split': 10}
+3       RandomForest  0.836941   0.792776  0.780899  0.786792  0.902555   3.0  {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 200}
+4                KNN  0.856421   0.808471  0.822097  0.815227  0.913674   6.0                                                          {'clf__n_neighbors': 9}
+5                SVM  0.835498   0.784916  0.789326  0.787115  0.898949   6.0                          {'clf__C': 10, 'clf__gamma': 0.1, 'clf__kernel': 'rbf'}
+6       DecisionTree  0.823232   0.766114  0.779026  0.772516  0.867352   6.0                             {'clf__max_depth': 10, 'clf__min_samples_split': 10}
+7       RandomForest  0.866162   0.842675  0.802434  0.822062  0.927536   6.0  {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 200}
+8                KNN  0.888528   0.863158  0.844569  0.853762  0.937618   9.0                                                          {'clf__n_neighbors': 9}
+9                SVM  0.898268   0.867978  0.867978  0.867978  0.941659   9.0                          {'clf__C': 10, 'clf__gamma': 0.1, 'clf__kernel': 'rbf'}
+10      DecisionTree  0.828644   0.767358  0.796816  0.781810  0.882828   9.0                               {'clf__max_depth': 5, 'clf__min_samples_split': 5}
+11      RandomForest  0.894661   0.878906  0.842697  0.860421  0.951345   9.0  {'clf__max_depth': None, 'clf__min_samples_split': 5, 'clf__n_estimators': 100}
+12               KNN  0.889971   0.870748  0.838951  0.854554  0.937242  15.0                                                          {'clf__n_neighbors': 9}
+13               SVM  0.901876   0.871269  0.874532  0.872897  0.953462  15.0                         {'clf__C': 10, 'clf__gamma': 0.01, 'clf__kernel': 'rbf'}
+14      DecisionTree  0.852814   0.828032  0.779963  0.803279  0.883257  15.0                               {'clf__max_depth': 5, 'clf__min_samples_split': 2}
+15      RandomForest  0.897186   0.891109  0.835206  0.862252  0.954819  15.0  {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 200}
+16               KNN  0.877345   0.847992  0.830524  0.839167  0.931228  20.0                                                          {'clf__n_neighbors': 9}
+17               SVM  0.913059   0.886088  0.888577  0.887331  0.960224  20.0                         {'clf__C': 10, 'clf__gamma': 0.01, 'clf__kernel': 'rbf'}
+18      DecisionTree  0.841991   0.793843  0.796816  0.795327  0.886246  20.0                               {'clf__max_depth': 5, 'clf__min_samples_split': 2}
+19      RandomForest  0.906205   0.903194  0.847378  0.874396  0.956131  20.0  {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 200}
+20               KNN  0.873377   0.825023  0.852060  0.838323  0.930741  25.0                                                          {'clf__n_neighbors': 9}
+21               SVM  0.918110   0.888992  0.899813  0.894369  0.964913  25.0                         {'clf__C': 10, 'clf__gamma': 0.01, 'clf__kernel': 'rbf'}
+22      DecisionTree  0.831530   0.777470  0.788390  0.782892  0.870873  25.0                               {'clf__max_depth': 5, 'clf__min_samples_split': 2}
+23      RandomForest  0.908009   0.906094  0.849251  0.876752  0.961067  25.0  {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 200}
+24               KNN  0.870491   0.826127  0.840824  0.833411  0.929150  30.0                                                          {'clf__n_neighbors': 9}
+25               SVM  0.914863   0.887337  0.892322  0.889823  0.966116  30.0                         {'clf__C': 10, 'clf__gamma': 0.01, 'clf__kernel': 'rbf'}
+26      DecisionTree  0.843074   0.790634  0.806180  0.798331  0.888597  30.0                               {'clf__max_depth': 5, 'clf__min_samples_split': 2}
+27      RandomForest  0.907648   0.907631  0.846442  0.875969  0.961102  30.0  {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 200}
+28    VotingEnsemble  0.913781   0.905975  0.866105  0.885591  0.962017   NaN                                                                              NaN
+29  StackingEnsemble  0.920274   0.909179  0.881086  0.894912  0.967456   NaN                                                                              NaN
+
+Classification Report for KNN (K=3):
+              precision    recall  f1-score   support
+
+           0       0.86      0.85      0.86      1704
+           1       0.76      0.78      0.77      1068
+
+    accuracy                           0.82      2772
+   macro avg       0.81      0.82      0.82      2772
+weighted avg       0.82      0.82      0.82      2772
+
+================================================================================
+
+Classification Report for SVM (K=3):
+              precision    recall  f1-score   support
+
+           0       0.83      0.81      0.82      1704
+           1       0.71      0.74      0.73      1068
+
+    accuracy                           0.78      2772
+   macro avg       0.77      0.78      0.77      2772
+weighted avg       0.79      0.78      0.79      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=3):
+              precision    recall  f1-score   support
+
+           0       0.84      0.83      0.84      1704
+           1       0.74      0.75      0.74      1068
+
+    accuracy                           0.80      2772
+   macro avg       0.79      0.79      0.79      2772
+weighted avg       0.80      0.80      0.80      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=3):
+              precision    recall  f1-score   support
+
+           0       0.86      0.87      0.87      1704
+           1       0.79      0.78      0.79      1068
+
+    accuracy                           0.84      2772
+   macro avg       0.83      0.83      0.83      2772
+weighted avg       0.84      0.84      0.84      2772
+
+================================================================================
+
+Classification Report for KNN (K=6):
+              precision    recall  f1-score   support
+
+           0       0.89      0.88      0.88      1704
+           1       0.81      0.82      0.82      1068
+
+    accuracy                           0.86      2772
+   macro avg       0.85      0.85      0.85      2772
+weighted avg       0.86      0.86      0.86      2772
+
+================================================================================
+
+Classification Report for SVM (K=6):
+              precision    recall  f1-score   support
+
+           0       0.87      0.86      0.87      1704
+           1       0.78      0.79      0.79      1068
+
+    accuracy                           0.84      2772
+   macro avg       0.83      0.83      0.83      2772
+weighted avg       0.84      0.84      0.84      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=6):
+              precision    recall  f1-score   support
+
+           0       0.86      0.85      0.86      1704
+           1       0.77      0.78      0.77      1068
+
+    accuracy                           0.82      2772
+   macro avg       0.81      0.81      0.81      2772
+weighted avg       0.82      0.82      0.82      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=6):
+              precision    recall  f1-score   support
+
+           0       0.88      0.91      0.89      1704
+           1       0.84      0.80      0.82      1068
+
+    accuracy                           0.87      2772
+   macro avg       0.86      0.85      0.86      2772
+weighted avg       0.87      0.87      0.87      2772
+
+================================================================================
+
+Classification Report for KNN (K=9):
+              precision    recall  f1-score   support
+
+           0       0.90      0.92      0.91      1704
+           1       0.86      0.84      0.85      1068
+
+    accuracy                           0.89      2772
+   macro avg       0.88      0.88      0.88      2772
+weighted avg       0.89      0.89      0.89      2772
+
+================================================================================
+
+Classification Report for SVM (K=9):
+              precision    recall  f1-score   support
+
+           0       0.92      0.92      0.92      1704
+           1       0.87      0.87      0.87      1068
+
+    accuracy                           0.90      2772
+   macro avg       0.89      0.89      0.89      2772
+weighted avg       0.90      0.90      0.90      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=9):
+              precision    recall  f1-score   support
+
+           0       0.87      0.85      0.86      1704
+           1       0.77      0.80      0.78      1068
+
+    accuracy                           0.83      2772
+   macro avg       0.82      0.82      0.82      2772
+weighted avg       0.83      0.83      0.83      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=9):
+              precision    recall  f1-score   support
+
+           0       0.90      0.93      0.92      1704
+           1       0.88      0.84      0.86      1068
+
+    accuracy                           0.89      2772
+   macro avg       0.89      0.88      0.89      2772
+weighted avg       0.89      0.89      0.89      2772
+
+================================================================================
+
+Classification Report for KNN (K=15):
+              precision    recall  f1-score   support
+
+           0       0.90      0.92      0.91      1704
+           1       0.87      0.84      0.85      1068
+
+    accuracy                           0.89      2772
+   macro avg       0.89      0.88      0.88      2772
+weighted avg       0.89      0.89      0.89      2772
+
+================================================================================
+
+Classification Report for SVM (K=15):
+              precision    recall  f1-score   support
+
+           0       0.92      0.92      0.92      1704
+           1       0.87      0.87      0.87      1068
+
+    accuracy                           0.90      2772
+   macro avg       0.90      0.90      0.90      2772
+weighted avg       0.90      0.90      0.90      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=15):
+              precision    recall  f1-score   support
+
+           0       0.87      0.90      0.88      1704
+           1       0.83      0.78      0.80      1068
+
+    accuracy                           0.85      2772
+   macro avg       0.85      0.84      0.84      2772
+weighted avg       0.85      0.85      0.85      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=15):
+              precision    recall  f1-score   support
+
+           0       0.90      0.94      0.92      1704
+           1       0.89      0.84      0.86      1068
+
+    accuracy                           0.90      2772
+   macro avg       0.90      0.89      0.89      2772
+weighted avg       0.90      0.90      0.90      2772
+
+================================================================================
+
+Classification Report for KNN (K=20):
+              precision    recall  f1-score   support
+
+           0       0.90      0.91      0.90      1704
+           1       0.85      0.83      0.84      1068
+
+    accuracy                           0.88      2772
+   macro avg       0.87      0.87      0.87      2772
+weighted avg       0.88      0.88      0.88      2772
+
+================================================================================
+
+Classification Report for SVM (K=20):
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93      1704
+           1       0.89      0.89      0.89      1068
+
+    accuracy                           0.91      2772
+   macro avg       0.91      0.91      0.91      2772
+weighted avg       0.91      0.91      0.91      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=20):
+              precision    recall  f1-score   support
+
+           0       0.87      0.87      0.87      1704
+           1       0.79      0.80      0.80      1068
+
+    accuracy                           0.84      2772
+   macro avg       0.83      0.83      0.83      2772
+weighted avg       0.84      0.84      0.84      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=20):
+              precision    recall  f1-score   support
+
+           0       0.91      0.94      0.93      1704
+           1       0.90      0.85      0.87      1068
+
+    accuracy                           0.91      2772
+   macro avg       0.91      0.90      0.90      2772
+weighted avg       0.91      0.91      0.91      2772
+
+================================================================================
+
+Classification Report for KNN (K=25):
+              precision    recall  f1-score   support
+
+           0       0.91      0.89      0.90      1704
+           1       0.83      0.85      0.84      1068
+
+    accuracy                           0.87      2772
+   macro avg       0.87      0.87      0.87      2772
+weighted avg       0.87      0.87      0.87      2772
+
+================================================================================
+
+Classification Report for SVM (K=25):
+              precision    recall  f1-score   support
+
+           0       0.94      0.93      0.93      1704
+           1       0.89      0.90      0.89      1068
+
+    accuracy                           0.92      2772
+   macro avg       0.91      0.91      0.91      2772
+weighted avg       0.92      0.92      0.92      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=25):
+              precision    recall  f1-score   support
+
+           0       0.87      0.86      0.86      1704
+           1       0.78      0.79      0.78      1068
+
+    accuracy                           0.83      2772
+   macro avg       0.82      0.82      0.82      2772
+weighted avg       0.83      0.83      0.83      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=25):
+              precision    recall  f1-score   support
+
+           0       0.91      0.94      0.93      1704
+           1       0.91      0.85      0.88      1068
+
+    accuracy                           0.91      2772
+   macro avg       0.91      0.90      0.90      2772
+weighted avg       0.91      0.91      0.91      2772
+
+================================================================================
+
+Classification Report for KNN (K=30):
+              precision    recall  f1-score   support
+
+           0       0.90      0.89      0.89      1704
+           1       0.83      0.84      0.83      1068
+
+    accuracy                           0.87      2772
+   macro avg       0.86      0.86      0.86      2772
+weighted avg       0.87      0.87      0.87      2772
+
+================================================================================
+
+Classification Report for SVM (K=30):
+              precision    recall  f1-score   support
+
+           0       0.93      0.93      0.93      1704
+           1       0.89      0.89      0.89      1068
+
+    accuracy                           0.91      2772
+   macro avg       0.91      0.91      0.91      2772
+weighted avg       0.91      0.91      0.91      2772
+
+================================================================================
+
+Classification Report for DecisionTree (K=30):
+              precision    recall  f1-score   support
+
+           0       0.88      0.87      0.87      1704
+           1       0.79      0.81      0.80      1068
+
+    accuracy                           0.84      2772
+   macro avg       0.83      0.84      0.83      2772
+weighted avg       0.84      0.84      0.84      2772
+
+================================================================================
+
+Classification Report for RandomForest (K=30):
+              precision    recall  f1-score   support
+
+           0       0.91      0.95      0.93      1704
+           1       0.91      0.85      0.88      1068
+
+    accuracy                           0.91      2772
+   macro avg       0.91      0.90      0.90      2772
+weighted avg       0.91      0.91      0.91      2772
+
+================================================================================
+
+Classification Report for Voting Ensemble:
+              precision    recall  f1-score   support
+
+           0       0.92      0.94      0.93      1704
+           1       0.91      0.87      0.89      1068
+
+    accuracy                           0.91      2772
+   macro avg       0.91      0.90      0.91      2772
+weighted avg       0.91      0.91      0.91      2772
+
+================================================================================
+
+Classification Report for Stacking Ensemble:
+              precision    recall  f1-score   support
+
+           0       0.93      0.94      0.94      1704
+           1       0.91      0.88      0.89      1068
+
+    accuracy                           0.92      2772
+   macro avg       0.92      0.91      0.92      2772
+weighted avg       0.92      0.92      0.92      2772
+
+================================================================================
